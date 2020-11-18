@@ -9,6 +9,8 @@ import {ContractPageService} from 'src/app/services/contract-page/contract-page.
 import {ProductPageService} from 'src/app/services/product-page/product-page.service';
 import {MainService} from 'src/app/services/main/main.service';
 import {LanguageService} from 'src/app/services/language/language.service';
+import { LuigiContextService } from '@m_bro_exp/client-support-angular';
+import { Context } from '@luigi-project/client';
 
 @Component({
     selector: 'app-dashboard',
@@ -24,12 +26,16 @@ export class DashboardComponent implements OnInit, OnDestroy {
     productTableHeaders: string[];
     subscriptionContract: Subscription;
     subscriptionProduct: Subscription;
+    subscriptionLuigiContext: Subscription;
+    context: Context;
+
     mobile:boolean =  true;
     constructor(
       public productService:ProductsService,
       public contractService: ContractsService,
       private _main: MainService,
-      private _languageService: LanguageService) {
+      private _languageService: LanguageService,
+      private luigiContextService: LuigiContextService) {
     }
 
     ngOnInit() {
@@ -43,6 +49,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.subscriptionContract = this.contractService.getContractsObservable().subscribe(data => {
         const databaseData = Object.keys(data).map(i => data[i]);
         this.contracts = databaseData;
+      });
+      this.subscriptionLuigiContext = this.luigiContextService.contextObservable().subscribe(ctx => {
+        if (ctx.contextType === 'init') {
+            console.log('initial ctx');
+        }
+        this.context = ctx.context;
       });
 
       this._languageService.lang.subscribe(lang => {

@@ -13,14 +13,14 @@ import {
     AlertModule,
     AvatarModule,
     BusyIndicatorModule,
-    ButtonModule, 
-    DatePickerModule,  
+    ButtonModule,
+    DatePickerModule,
     DialogModule,
-    FormModule, 
+    FormModule,
     IconModule,
     InfoLabelModule,
     InlineHelpModule,
-    LayoutGridModule, 
+    LayoutGridModule,
     LayoutPanelModule,
     ListModule,
     MultiInputModule,
@@ -37,6 +37,7 @@ import {
     FileInputModule,
     MenuModule,
 } from '@fundamental-ngx/core';
+import { LuigiContextService, LuigiAutoRoutingService} from '@m_bro_exp/client-support-angular';
 import { ContractsComponent } from './components/contracts/contracts.component';
 import { ProductsComponent } from './components/products/products.component';
 import { StatusPipe } from './components/contracts/status.pipe';
@@ -131,12 +132,14 @@ import { UsersComponent } from './components/users/users.component';
       CookieService,
       CompactService,
       ContractsService,
-      ProductsService, 
+      ProductsService,
       StatusToColorPipe,
       LanguageTypePipe,
       LanguageStatusPipe,
       LuigiUiService,
-      SnakeCasePipe
+      SnakeCasePipe,
+      LuigiAutoRoutingService,
+      LuigiContextService
     ],
     entryComponents: [
         CreateContractModalComponent,

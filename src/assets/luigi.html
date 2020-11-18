@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Hello Luigi</title>
+    <link rel='stylesheet' href='https://unpkg.com/@luigi-project/core@1.5.0/luigi.css'>
+    <script src='https://unpkg.com/@luigi-project/core@1.5.0/luigi.js'></script>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+    Luigi.setConfig({
+        navigation: {
+            viewGroupSettings: {
+                g1: {
+                    preloadUrl: 'http://localhost:4200#/preload'
+                }
+            },
+            nodes: [{
+                pathSegment: 'home',
+                label: 'h',
+                hideFromNav: true,
+                children: [{
+                    pathSegment: 'overview',
+                    label: 'Overviewui5',
+                    icon: 'home',
+                    viewUrl: 'https://fiddle.luigi-project.io/examples/microfrontends/multipurpose.html',
+                    context: {
+                        title: 'Welcome to Luigi Fiddle!',
+                        content: 'Click on "Modify Config" at the bottom right and play around with your Luigi configuration'
+                    }
+                },{
+                    pathSegment: 'db',
+                    viewGroup: 'g1',
+                    label: 'Dashboard',
+                    category: {
+                        label: 'Fundamental Demo Pages',
+                        icon: 'dimension',
+                        collapsible: true
+                    },
+                    loadingIndicator: {
+                        enabled: false
+                    },
+                    viewUrl: 'http://localhost:4200'
+                },{
+                    pathSegment: 'products',
+                    viewGroup: 'g1',
+                    label: 'Products',
+                    category: 'Fundamental Demo Pages',
+                    loadingIndicator: {
+                        enabled: false
+                    },
+                    viewUrl: 'http://localhost:4200#/products'
+                },{
+                    pathSegment: 'contracts',
+                    viewGroup: 'g1',
+                    label: 'Contracts',
+                    category: 'Fundamental Demo Pages',
+                    loadingIndicator: {
+                        enabled: false
+                    },
+                    viewUrl: 'http://localhost:4200#/contracts'
+                },{
+                    pathSegment: 'users',
+                    viewGroup: 'g1',
+                    label: 'Users',
+                    category: 'Fundamental Demo Pages',
+                    loadingIndicator: {
+                        enabled: false
+                    },
+                    viewUrl: 'http://localhost:4200#/users'
+                }]
+            }]
+        },
+
+
+        routing: {
+            useHashRouting: true
+        },
+        settings: {
+            responsiveNavigation: 'Fiori3',
+            header: {
+                title: 'Test'
+            }
+        }
+    });
+
+    </script>
+</body>
+
+</html>

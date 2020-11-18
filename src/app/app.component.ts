@@ -41,9 +41,9 @@ export class AppComponent implements OnInit{
   title = 'Fundamental NGX Demo';
   sideNavMain: SideNavModel[] = [];
   sideNavSecondary: SideNavModel[] = [];
-  luigiOption: boolean = false;
+  luigiOption: boolean = true;
   settings = {
-    theme: 'sap_fiori_3', 
+    theme: 'sap_fiori_3',
     mode: 'cozy'
   };
   mobile = true;
@@ -90,10 +90,10 @@ export class AppComponent implements OnInit{
       });
     })
 
-    this.luigiUiService.luigiOption.subscribe(luigiOption => {
-      this.luigiOption = luigiOption;
-    });
-    
+    // this.luigiUiService.luigiOption.subscribe(luigiOption => {
+    //   this.luigiOption = luigiOption;
+    // });
+
     if (!this.authService.isLoggedIn) {
       this.userMenu[1] = { text: 'Sign In', callback: () => this.router.navigate(['auth'])};
     } else {

@@ -14,6 +14,7 @@ Basic knowledge of Angular is expected.
 2. Run npm install
 3. Run `ng serve` in the root.
 4. Navigate to `http://localhost:4200/`.
+5. For the luigi app, go to `http://localhost:4200/assets/luigi.html`.
 
 The application will automatically reload if you change any of the source files.
 

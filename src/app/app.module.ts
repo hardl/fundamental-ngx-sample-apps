@@ -37,7 +37,7 @@ import {
     FileInputModule,
     MenuModule,
 } from '@fundamental-ngx/core';
-import { LuigiContextService, LuigiAutoRoutingService} from '@m_bro_exp/client-support-angular';
+import { LuigiAngularSupportModule} from '@m_bro_exp/client-support-angular';
 import { ContractsComponent } from './components/contracts/contracts.component';
 import { ProductsComponent } from './components/products/products.component';
 import { StatusPipe } from './components/contracts/status.pipe';
@@ -126,7 +126,8 @@ import { UsersComponent } from './components/users/users.component';
         SelectModule,
         SideNavigationModule,
         ShellbarModule,
-        TableModule
+        TableModule,
+        LuigiAngularSupportModule
     ],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
       CookieService,
@@ -137,9 +138,7 @@ import { UsersComponent } from './components/users/users.component';
       LanguageTypePipe,
       LanguageStatusPipe,
       LuigiUiService,
-      SnakeCasePipe,
-      LuigiAutoRoutingService,
-      LuigiContextService
+      SnakeCasePipe
     ],
     entryComponents: [
         CreateContractModalComponent,

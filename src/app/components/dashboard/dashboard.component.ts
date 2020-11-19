@@ -9,7 +9,7 @@ import {ContractPageService} from 'src/app/services/contract-page/contract-page.
 import {ProductPageService} from 'src/app/services/product-page/product-page.service';
 import {MainService} from 'src/app/services/main/main.service';
 import {LanguageService} from 'src/app/services/language/language.service';
-import { LuigiContextService } from '@m_bro_exp/client-support-angular';
+import { ILuigiContextTypes, LuigiContextService } from '@m_bro_exp/client-support-angular';
 import { Context } from '@luigi-project/client';
 
 @Component({
@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
         this.contracts = databaseData;
       });
       this.subscriptionLuigiContext = this.luigiContextService.contextObservable().subscribe(ctx => {
-        if (ctx.contextType === 'init') {
+        if (ctx.contextType === ILuigiContextTypes.INIT) {
             console.log('initial ctx');
         }
         this.context = ctx.context;

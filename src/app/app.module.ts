@@ -37,7 +37,7 @@ import {
     FileInputModule,
     MenuModule,
 } from '@fundamental-ngx/core';
-import { LuigiAngularSupportModule} from '@m_bro_exp/client-support-angular';
+import { LuigiAngularSupportModule} from '@luigi-project/client-support-angular';
 import { ContractsComponent } from './components/contracts/contracts.component';
 import { ProductsComponent } from './components/products/products.component';
 import { StatusPipe } from './components/contracts/status.pipe';

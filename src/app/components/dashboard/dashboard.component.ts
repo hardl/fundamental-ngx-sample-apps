@@ -9,7 +9,7 @@ import {ContractPageService} from 'src/app/services/contract-page/contract-page.
 import {ProductPageService} from 'src/app/services/product-page/product-page.service';
 import {MainService} from 'src/app/services/main/main.service';
 import {LanguageService} from 'src/app/services/language/language.service';
-import { ILuigiContextTypes, LuigiContextService } from '@m_bro_exp/client-support-angular';
+import { ILuigiContextTypes, LuigiContextService } from '@luigi-project/client-support-angular';
 import { Context } from '@luigi-project/client';
 
 @Component({

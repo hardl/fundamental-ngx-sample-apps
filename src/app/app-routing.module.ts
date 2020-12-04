@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LuigiAutoRoutingService, LuigiPreloadComponent } from '@m_bro_exp/client-support-angular/';
+import { LuigiAutoRoutingService, LuigiPreloadComponent } from '@luigi-project/client-support-angular/';
 import {ContractsComponent} from './components/contracts/contracts.component';
 import {ProductsComponent} from './components/products/products.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';

@@ -12,11 +12,10 @@ Basic knowledge of Angular is expected.
 
 1. Clone the repository.
 2. Run npm install
-3. Run `cp -ra node_modules/\@m_bro_exp node_modules/\@luigi-project`.
-4. Run `npm run copy-light-theme`
-5. Run `ng serve` in the root.
-6. Navigate to `http://localhost:4200/`.
-7. For the luigi app, go to `http://localhost:4200/assets/luigi.html`.
+3. Run `npm run copy-light-theme`
+4. Run `ng serve` in the root.
+5. Navigate to `http://localhost:4200/`.
+6. For the luigi app, go to `http://localhost:4200/assets/luigi.html`.
 
 The application will automatically reload if you change any of the source files.
 

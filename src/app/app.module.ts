@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import {
     AlertModule,
     AvatarModule,
@@ -129,7 +129,7 @@ import { UsersComponent } from './components/users/users.component';
         TableModule,
         LuigiAngularSupportModule
     ],
-    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
+    providers: [ {provide: LocationStrategy, useClass: PathLocationStrategy},
       CookieService,
       CompactService,
       ContractsService,
